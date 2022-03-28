@@ -2,4 +2,4 @@ beautifulsoup4 == 4.7.1
 pandas == 1.2.4
 selenium == 4.1.2
 streamlit == 1.7.0
-chromedriver_binary == 99.0.4844.83
+chromedriver_binary == 99.0.4844.51.0
