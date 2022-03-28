@@ -201,7 +201,7 @@ def get_df_comment(url):
 def get_url(text):
     options = Options()
     options.add_argument("--headless")
-    driver = webdriver.Chrome(options = options)
+    driver = webdriver.Chrome(options = options, executable_path = 'chromedriver')
     driver.get("https://finance.yahoo.co.jp/")
 
     elem_input = driver.find_element_by_xpath("/html/body/div/div[3]/header/div/div/div/form/input")
