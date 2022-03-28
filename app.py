@@ -1,6 +1,7 @@
 import streamlit as st
 import os, sys
 
+
 sys.path.append('/Users/shakuto/Python/Webスクレイピング/yahooファイナンス掲示板スクレイピング/py-files')
 from get_url import get_url
 from get_df_comment import get_df_comment
@@ -25,5 +26,5 @@ if not text:
 else:
     df = get_comment_from_text(f"{text}")
 
-    st.subheader(f"{text}の掲示板コメント　　　　　　")
+    st.subheader(f"{text}の掲示板コメント")
     st.dataframe(df)
