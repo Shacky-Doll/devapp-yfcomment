@@ -4,6 +4,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from bs4 import BeautifulSoup
 
 import streamlit as st
+import chromedriver_binary
 
 import pandas as pd
 import re
@@ -151,7 +152,7 @@ def scroll_to_elem(driver):
 def get_comment(url):
     options = Options()
     options.add_argument("--headless")
-    driver = webdriver.Chrome(options = options)
+    driver = webdriver.Chrome()
     driver.get(url)
     driver.implicitly_wait(10)
 
@@ -174,9 +175,9 @@ def get_comment(url):
 
     comment_list = get_list(driver, meta_info)
 
-    driver.quit()
-
     return comment_list
+
+    driver.quit()
 
 
 def add_year(list):
@@ -201,7 +202,7 @@ def get_df_comment(url):
 def get_url(text):
     options = Options()
     options.add_argument("--headless")
-    driver = webdriver.Chrome(options = options)
+    driver = webdriver.Chrome()
     driver.get("https://finance.yahoo.co.jp/")
 
     elem_input = driver.find_element_by_xpath("/html/body/div/div[3]/header/div/div/div/form/input")
@@ -215,6 +216,8 @@ def get_url(text):
 
     cur_url = driver.current_url
     return cur_url
+
+    driver.quite()
 
 @st.cache
 def get_comment_from_text(text):
