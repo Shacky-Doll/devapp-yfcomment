@@ -4,6 +4,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 from bs4 import BeautifulSoup
 
 import streamlit as st
+import chromedriver_binary
+
 import pandas as pd
 import re
 import time
