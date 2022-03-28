@@ -1,3 +1,4 @@
-pandas
-selenium
-streamlit
+beautifulsoup4 == 4.10.0
+pandas == 1.2.4
+selenium == 4.1.2
+streamlit == 1.7.0
