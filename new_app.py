@@ -4,7 +4,6 @@ from selenium.webdriver.common.action_chains import ActionChains
 from bs4 import BeautifulSoup
 
 import streamlit as st
-import chromedriver_binary
 
 import pandas as pd
 import re
@@ -13,6 +12,7 @@ import time
 from datetime import datetime
 
 
+scroll_wait_time = 1
 
 
 
