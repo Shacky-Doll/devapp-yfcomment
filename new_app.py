@@ -219,7 +219,6 @@ def get_url(text):
 
     driver.quite()
 
-@st.cache
 def get_comment_from_text(text):
     url = get_url(text)
 
