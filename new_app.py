@@ -216,7 +216,7 @@ def get_url(text):
     cur_url = driver.current_url
     return cur_url
 
-
+@st.cache
 def get_comment_from_text(text):
     url = get_url(text)
 
@@ -231,15 +231,6 @@ st.title("ヤフーファイナンス掲示板コメント抽出アプリ")
 
 text = st.text_input("銘柄コード、ティッカーコードを入力してください。")
 f"{text}の掲示板のコメントを表示します。"
-
-@st.cache
-def get_comment_from_text(text):
-    url = get_url(text)
-
-    df = get_df_comment(url)
-    
-    return(df)
-
 
 if not text:
     st.error("上の空欄に銘柄コードかティッカーコードを入力してください。")
