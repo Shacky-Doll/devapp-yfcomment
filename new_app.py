@@ -208,8 +208,8 @@ def get_url(text):
     elem_input = driver.find_element_by_xpath("/html/body/div/div[3]/header/div/div/div/form/input")
     elem_input.send_keys(text)
 
-    elem_click = driver.find_element_by_xpath("/html/body/div/div[3]/header/div/div/div/form/button/span[2]")
-    elem_click.click()
+    elem_buttun = driver.find_element_by_xpath("/html/body/div/div[3]/header/div/div/div/form/button/span[2]")
+    elem_buttun.click()
 
     elem_pribbs = driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/div[1]/div[3]/ul/li[6]")
     elem_pribbs.click()
